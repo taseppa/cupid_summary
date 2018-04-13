@@ -86,7 +86,7 @@ def main():
                         help='Password')
     parser.add_argument('searchno', type=int,
                         help='Search number')
-    parser.add_argument('baseurl', type=string,
+    parser.add_argument('base_url', type=str, nargs="?",
                         help='Base url', default="https://www.thaicupid.com")
     args = parser.parse_args()
     generate_page(email=args.email, password=args.password, number_of_pages=args.pages, search_id=args.searchno, base_url=args.base_url)

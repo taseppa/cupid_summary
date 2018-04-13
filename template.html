@@ -10,9 +10,10 @@
   <div class="row">
     {% for profile in profiles %}
     <div class="col-lg-2 rounded border">
-      {{profile__link}}
-      <a href="{{base_url}}{{profile.link}}"><img src="{{profile.img}}"</a>
-      <h6 class="small">{{profile.name}}</h6>
+      <a href="{{base_url}}{{profile.link}}">
+        <img src="{{profile.img}}"/>
+        <h6 class="small">{{profile.name}}</h6>
+      </a>
     </div>
     {% endfor %}
   </div>
