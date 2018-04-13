@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Profiles</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="row">
+    {% for profile in profiles %}
+    <div class="col-lg-2 rounded border">
+      {{profile__link}}
+      <a href="{{base_url}}{{profile.link}}"><img src="{{profile.img}}"</a>
+      <h6 class="small">{{profile.name}}</h6>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
